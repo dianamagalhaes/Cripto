@@ -10,6 +10,7 @@ mapping = {
     "O": "L", "P": "K", "Q": "H", "R": "U",
     "S": "W", "T": "R", "U": "A", "V": "S",
     "X": "E", "Y": "Q", "Z": "F",
+    "D": "J", "E": "X", "W": "Z"
 }
 
 cifrar = str.maketrans({v: k for k, v in mapping.items()})
