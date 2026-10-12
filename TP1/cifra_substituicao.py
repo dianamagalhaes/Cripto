@@ -5,40 +5,35 @@ msg_encrypted='''HG UOVI UJJXUTV VI GI BX, NRG H UB CIG USUTXGQUG UCA MIBBRCHGA 
 words = {}
 
 for char in msg_encrypted:
-	if char not in words:
-		words[char] = 1
-	else:
-		words[char] += 1		
-		
-	if words[char]==('H')
-		'H'='I'
-		i+=1				
-	attempt = msg_encrypted.replace("J", "Y")
-	attempt = attempt.replace("G", "T")
-	attempt = attempt.replace("S", "B")
-	attempt = attempt.replace("Y", "K")
-	attempt = attempt.replace("A", "W")
-	attempt = attempt.replace("H", "I")
-	attempt = attempt.replace("K", "V")
-	attempt = attempt.replace("T", "T") #
-	attempt = attempt.replace("P", "J")
-	attempt = attempt.replace("U", "A") #
-	attempt = attempt.replace("M", "O")
-	attempt = attempt.replace("Z", "G")
-	attempt = attempt.replace("E", "Q")
-	attempt = attempt.replace("V", "S") #
-	attempt = attempt.replace("I", "O")
-	attempt = attempt.replace("Q", "D")
-	attempt = attempt.replace("F", "P")
-	attempt = attempt.replace("N", "C")
-	attempt = attempt.replace("R", "O")
-	attempt = attempt.replace("W", "Z")
-	attempt = attempt.replace("O", "L") #
-	attempt = attempt.replace("C", "N")
-	attempt = attempt.replace("D", "X")
-	attempt = attempt.replace("B", "M")
-	attempt = attempt.replace("L", "L")
+    if char not in words:
+        words[char] = 1
+    else:
+        words[char] += 1
 
+# Inverter o mapa de decifração
+# mapping_cifrar = {valor: chave for chave, valor in mapping.items()}
+
+#msg_original = "IT ALSO APPEARS TO ME"
+
+#msg_cifrada = msg_original.upper().translate(
+#    str.maketrans(mapping_cifrar)
+#)
+
+#print(msg_cifrada)
+# HG UOVI UJJXUTV GI BX
+# Substitutions for the active encrypted message
+
+
+mapping = {
+    "A": "Y", "B": "M", "C": "N", "F": "V",
+    "G": "T", "H": "I", "I": "O", "J": "P",
+    "K": "G", "L": "D", "M": "C", "N": "B",
+    "O": "L", "P": "K", "Q": "H", "R": "U",
+    "S": "W", "T": "R", "U": "A", "V": "S",
+    "X": "E", "Y": "Q", "Z": "F",
+}
+
+attempt = msg_encrypted.translate(str.maketrans(mapping))
 
 print(attempt)
 
